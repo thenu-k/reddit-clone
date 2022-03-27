@@ -14,14 +14,6 @@ app.listen(process.env.PORT, '0.0.0.0')
 let body_parser = require('body-parser')
 let json_parser = body_parser.json()
 
-//Data store
-var thread_starter_data={    
-    title: 'General Chat',
-    content: 'Say something motherfucker',
-    username: 'San_D_Als_Sensei'
-}
-var thread_replies_data = []
-
 //Sending the home page
 app.get('/',   (req, res)=>{
     //res.redirect('/thread') //redirecting for now
@@ -95,12 +87,4 @@ app.get('/resources/sitemap', (req,res)=>{
 
 
 //Post information
-let post_info=[
-    {
-        title: 'General Chat',
-        content: 'Say something motherfucker',
-        username: 'San_D_Als_Sensei',
-        index: 0,
-        replies: []
-    }
-]
+let post_info=[]
