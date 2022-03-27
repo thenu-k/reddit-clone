@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread | <%=thread_name%></title>
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/threads.css">
+    <link rel="stylesheet" href="/CSS/theme.css">
+    <link rel="stylesheet" href="/CSS/reply.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="/JS/thread.js" defer></script>
+</head>
+<body class="theme darker">
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="">Logo</a></li>
+                <li class="search center"><input type="text" class="theme less_dark"></li>
+                <li class="notifications"><a href="/">Home</a></li>
+                <li class="profile"><a href="">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main center">
+        <section class="middle_container outer center">
+            <div class="middle_container inner">
+                <div class="posts_section">
+                    <div class="thread_starter contianer outer center">
+                        <% let starter_string = '<div class="post outer theme dark center"><div class="post inner"><div class="username_container outer"><span>'+thread_starter.username+'</span></div><div class="title_container"><h3>'+thread_starter.title+'</h3></div><div class="content_container"><p>'+thread_starter.content+'</p></div></div></div>'%>
+                        <%-starter_string%>
+                    </div>
+                    <div class="thread_replies outer">
+                        <div class="thread_replies inner">
+                            <% let reply_string = '';  for(let count=0; count< thread_replies.length; count++){ let count_string = '<div class="post reply outer theme dark center"><div class="post reply inner"><div class="username_container outer"><span>'+thread_replies[count].username+'</span></div><div class="content_container"><p>'+thread_replies[count].content+'</p></div></div></div>';  reply_string += count_string;};%>
+                            <%-reply_string%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="create reply outer center">
+            <div class="create reply inner theme dark">
+                <div class="reply input outer">
+                    <textarea class="theme dark" placeholder="Reply to this conversation."></textarea>
+                </div>
+                <div class="reply username outer center">
+                    <input type="text" placeholder="Username" class="theme dark">
+                </div>
+                <div class="submit outer center">
+                    <span class="center">Submit</span>
+                </div>
+            </div>
+    </section>
+   
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+
+.create.reply.outer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    left: 0;
+    height: 150px;
+}
+
+.create.reply.inner{
+    outline: rgb(116, 116, 116) 1px solid;
+    border-radius: 20px 20px 0 0;
+    width: 70vw;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 1fr/3fr 1fr;
+}
+
+
+.reply.input.outer{
+    grid-column: 1;
+    grid-row: 1/-1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.reply textarea{
+    min-width: 50vw;
+    min-height: 70%;
+    max-width: 50vw;
+    max-height: 90%;
+    border-radius: 10px;
+    border: none;
+    outline:solid 1px rgb(116, 116, 116);
+    margin-left: 5%;
+}
+
+.reply.username{
+    width: 100%;
+    height: 100%;
+}
+
+.reply.username input{
+    width: 90%;
+}
+
+.reply.username input::selection{
+    outline:solid 1px rgb(116, 116, 116);
+}
+
+.create.reply span{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(116, 116, 116);
+    border-radius: 5px;
+}
+
+.create.reply span:hover{
+    background-color: rgb(179, 179, 179);
+    cursor: pointer;
+}
+
+.main{
+    margin-bottom: 150px;
+}
+
+
+@media all and (max-width: 850px){
+    .create.reply.inner{
+        width: 100vw;
+    }
+
+    .create.reply span{
+        width: 80px;
+        height: 30px;
+        background-color: rgb(116, 116, 116);
+        border-radius: 5px;
+    }
+
+    input[type="text"]{
+        font-size: 12px;
+    }
+
+    
+    .create.reply.inner{
+        grid-template: 1fr 1fr/2fr 1fr;
+    }
+
+    
+}

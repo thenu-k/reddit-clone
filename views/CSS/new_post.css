@@ -1,0 +1,91 @@
+
+.new_post.outer{
+    margin-top: 50px;
+    height: 500px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.new_post.inner{
+    height: 500px;
+}
+
+.new_post .title_container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: rgb(116, 116, 116) 1px solid;
+}
+
+.new_post h3{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.new_post .title.input.outer{
+    width: 100%;
+    height: 50px;
+    border-bottom: rgb(116, 116, 116) 1px solid;
+}
+
+.title.input.outer input{
+    height: 30px;
+}
+
+
+.new_post input, .new_post textarea{
+    width: 95%;
+    outline: rgb(116, 116, 116) 1px solid;
+    border: none;
+    resize: none;
+    border-radius: 5px;
+}
+
+.new_post input:focus, .new_post textarea:focus{
+    outline: rgb(116, 116, 116) 1px solid;  
+    border: none;
+}
+
+.new_post textarea{
+    height: 200px;
+    margin: 30px 0;
+}
+
+.new_post .username input{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.new_post .username {
+    width: 100%;
+    border-bottom: rgb(116, 116, 116) 1px solid;
+}
+    
+.submit.outer{
+    height: 60px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.submit.outer span{
+    height: 30px;
+    width: 150px;
+    border-radius: 2px;
+    margin-left: 3%;
+    background-color: rgb(116, 116, 116);
+}
+
+.submit.outer span:hover{
+    background-color: rgb(161, 161, 161) ;
+    cursor: pointer;
+}
+
+.new_post input[type="text"]{
+    font-size: 15px;
+}

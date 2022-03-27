@@ -1,0 +1,57 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1A1A1B;
+    outline: rgb(116, 116, 116) 1px solid;
+}
+
+header nav ul{
+    width: 100%;
+    display: grid;
+    grid-template: 1fr/ repeat(5, 1fr);
+    height: 60px
+}
+
+header li,header a{
+    height: 100%;
+    width: 100%;
+}
+
+header li.notifications{
+    grid-column: 4;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+header li> a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header input{
+    width: 300px;
+    color: black;
+}
+
+header input:focus{
+    outline: none;
+}
+
+@media all and (max-width: 700px){
+    header .search{display: none}
+
+    header nav ul{grid-template: 1fr/repeat(3, 1fr);}
+
+    header li.notifications{grid-column: 2;}
+
+}
+
+@media all and (max-width: 500px){
+    header a{font-size: 14px;}
+}

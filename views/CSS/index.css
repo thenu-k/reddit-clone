@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    list-style: none;
+    color: white;
+}
+
+*:focus{outline: none;}
+*::selection{background-color: purple;}
+
+input {
+    color: white;
+    border-radius: 3px;
+    outline: rgb(116, 116, 116) 1px solid;
+    border: none;
+}
+
+.input_container > a:nth-child(1){
+    width: 100%;
+}
+
+input[type="text"]{
+    font-size: 15px;
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background-color: #030303;
+    min-height: 100vh;
+    margin-top: 60px;
+}
+
+.middle_container.outer, .middle_container.inner{
+    width: 900px;
+    min-height: 90vh;
+}
+
+.middle_container.inner{display: flex; align-items: center; flex-direction: column;}
+
+.create_post.outer {
+    width: 100%;
+}
+
+.create_post.inner{
+    height: 70px;
+    display: flex;
+    border-radius: 10px;
+    outline: rgb(116, 116, 116) 1px solid;
+}
+
+.img_container.outer{
+    width: 100px;
+    height: 100%;
+}
+
+.img_container.inner{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 999999px;
+}
+
+
+.create_post input{
+    height: 30px;
+    width: 100%;
+}
+
+.create_post .input_container{
+    width: 80%;
+}
+
+@media all and (max-width: 950px) {
+    .middle_container.outer{width: 90%;}
+}
+
+@media all and (max-width: 500px){
+    .img_container.outer{width: 60px}
+    
+    .create_post input{width: 90%;}
+
+    *{font-size: small}
+}
